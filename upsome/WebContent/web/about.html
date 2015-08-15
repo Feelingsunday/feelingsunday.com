@@ -31,13 +31,14 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onresize="divResize()" onload = "divResize()">
 
     <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#8ac6cd">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -49,6 +50,7 @@
             <li class="active"><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contract.html">Contact</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.feelingsunday.upsome"><img src="file/04HomeButton_PC.png" width="25px" height="25px"/>Get Upsome</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -56,13 +58,13 @@
 
     <div class="container">
 
-	<div align="center" style="padding-top:50pt;">
-		<div class="your-class" style="width:320pt;">
-		    <div style="background-image: url(file/DSC00517.JPG);background-size: 320pt 225pt;width:320pt;height:225pt;text-align:center;"><p style="color:white;font-weight: bold;padding-top:80pt">② We want people to share more of such pictures and smile.</p></div>
-		    <div style="background-image: url(file/DSC09173.JPG);background-size: 320pt 225pt;width:320pt;height:225pt;text-align:center;"><p style="color:white;font-weight: bold;padding-top:80pt">③ We do not want an unfair mobile world where only certain people receive spot light and popularity.</p></div>
-		    <div style="background-image: url(file/DSC09210.JPG);background-size: 320pt 225pt;width:320pt;height:225pt;text-align:center;"><p style="color:white;font-weight: bold;padding-top:80pt">④ Don’t share the artificial moments of your lives anymore.</p></div>
-		    <div style="background-image: url(file/DSC09818.JPG);background-size: 320pt 225pt;width:320pt;height:225pt;text-align:center;"><p style="color:white;font-weight: bold;padding-top:80pt">⑤ Get your smartphone out, smile, take a picture, and share it on ‘upsome’.</p></div>
-		    <div style="background-image: url(file/DSC09965.JPG);background-size: 320pt 225pt;width:320pt;height:225pt;text-align:center;"><p style="color:white;font-weight: bold;padding-top:80pt">① A picture of a smiling child makes everyone happy.</p></div>
+	<div align="center" style="padding-top:50px;">
+		<div id="pic_frame" class="your-class" style="width:560px;">
+		    <div name = "pictures" style="background-image: url(file/DSC00517.jpg);background-size: 560px 560px;width:560px;height:560px;text-align:center;"><p name = "picfont" style="color:white;font-weight: bold;padding-top:80pt">② We want people to share more of such pictures and smile.</p></div>
+		    <div name = "pictures" style="background-image: url(file/DSC09173.jpg);background-size: 560px 560px;width:560px;height:560px;text-align:center;"><p name = "picfont"  style="color:white;font-weight: bold;padding-top:80pt">③ We do not want an unfair mobile world where only certain people receive spot light and popularity.</p></div>
+		    <div name = "pictures" style="background-image: url(file/DSC09210.jpg);background-size: 560px 560px;width:560px;height:560px;text-align:center;"><p name = "picfont"  style="color:white;font-weight: bold;padding-top:80pt">④ Don’t share the artificial moments of your lives anymore.</p></div>
+		    <div name = "pictures" style="background-image: url(file/DSC09818.jpg);background-size: 560px 560px;width:560px;height:560px;text-align:center;"><p name = "picfont"  style="color:white;font-weight: bold;padding-top:80pt">⑤ Get your smartphone out, smile, take a picture, and share it on ‘upsome’.</p></div>
+		    <div name = "pictures" style="background-image: url(file/DSC09965.jpg);background-size: 560px 560px;width:560px;height:560px;text-align:center;"><p name = "picfont"  style="color:white;font-weight: bold;padding-top:80pt">① A picture of a smiling child makes everyone happy.</p></div>
 		    
 	  	</div>
   	</div>
@@ -92,13 +94,55 @@
 	    });
 	  });
 	</script>    
-    <nav class="navbar navbar-fixed-bottom" style="background-color:#8ac6cd">
+    <nav class="navbar navbar-fixed-bottom" style="background-color:#45301C">
       <div class="container" align="center">
       <br/>
-        <p style="color:white;">Copyright 2014 Feelingsunday Co., Ltd. All rights reserved</p>
+        <p style="color:#4F423F;text-align:center;">2015 FEELING SUNDAY <img id="img_insta" style="margin-left:300px;width:40px;height:40px" src="file/06InstaButton_Pc.png"/><img style="margin-left:20px;width:40px;height:40px" src="file/07FacebookButton_Pc.png"/></p>
       </div>
     </nav>
-    
-    
+  
+  <script>
+	function divResize(){
+		var ration = 0.45;
+		var width_height_ration = 3/4;
+		if(window.innerWidth >= 768){
+			var pf = document.getElementById("pic_frame");
+			pf.style.width = window.innerWidth * ration + "px"
+			
+			var ps = document.getElementsByName("pictures")
+			var pfnt = document.getElementsByName("picfont");
+			
+			for(var i=0; i<ps.length; i++){
+				ps[i].style.backgroundSize = window.innerWidth * ration + "px " + window.innerWidth * ration*width_height_ration + "px"
+				ps[i].style.width = window.innerWidth * ration + "px";
+				ps[i].style.height = window.innerWidth * ration*width_height_ration + "px";
+				pfnt[i].style.paddingTop = innerWidth * ration * 0.3 + "px";
+				pfnt[i].style.fontSize = "25px";
+			}
+		}else{
+			ration = 0.7;
+			var pf = document.getElementById("pic_frame");
+			pf.style.width = window.innerWidth * ration + "px"
+			
+			var ps = document.getElementsByName("pictures");
+			var pfnt = document.getElementsByName("picfont");
+
+			for(var i=0; i<ps.length; i++){
+				ps[i].style.backgroundSize = window.innerWidth * ration + "px " + window.innerWidth * ration*width_height_ration + "px"
+				ps[i].style.width = window.innerWidth * ration + "px";
+				ps[i].style.height = window.innerWidth * ration*width_height_ration + "px";
+				pfnt[i].style.paddingTop = innerWidth * ration * 0.3 + "px";
+				pfnt[i].style.fontSize = "15px";
+			}
+		}
+		
+		
+		if( window.innerWidth < 768){
+			document.getElementById("img_insta").style.marginLeft = (window.innerWidth /5) + "px";
+		}else{
+			document.getElementById("img_insta").style.marginLeft = "300px";
+		}
+	};
+  </script>
   </body>
 </html>

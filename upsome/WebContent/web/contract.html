@@ -29,7 +29,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onresize="divResize()" onload = "divResize()">
 
     <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#8ac6cd">
       <div class="container">
@@ -47,6 +47,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li class="active"><a href="contract.html">Contact</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.feelingsunday.upsome"><img src="file/04HomeButton_PC.png" width="25px" height="25px"/>Get Upsome</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -61,9 +62,9 @@
 		</p>
 		<br/><br/><br/><br/>
 		<h1>Others</h1>
-		<a href="#"></a><img src="file/ico_facebook.png" width="56pt" height="56pt"/></a>
-		<a href="#"><img src="file/ico_googleplus.png" width="56pt" height="56pt"/></a>
-		<a href="#"><img src="file/ico_insta.png" width="56pt" height="56pt"/></a>
+		<a href="#"><img src="file/07FacebookButton_Pc.png" width="56pt" height="56pt"/></a>
+		<a href="#"><img src="file/05GoogleButton_Pc.png" width="56pt" height="56pt"/></a>
+		<a href="#"><img src="file/06InstaButton_Pc.png" width="56pt" height="56pt"/></a>
       </div>
 
     </div><!-- /.container -->
@@ -76,14 +77,23 @@
     <script src="../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-    
-    <nav class="navbar navbar-fixed-bottom" style="background-color:#8ac6cd" >
+        
+    <nav class="navbar navbar-fixed-bottom" style="background-color:#45301C">
       <div class="container" align="center">
       <br/>
-        <p style="color:white;">Copyright 2014 Feelingsunday Co., Ltd. All rights reserved</p>
+        <p style="color:#4F423F;text-align:center;">2015 FEELING SUNDAY <img id="img_insta" style="margin-left:300px;width:40px;height:40px" src="file/06InstaButton_Pc.png"/><img style="margin-left:20px;width:40px;height:40px" src="file/07FacebookButton_Pc.png"/></p>
       </div>
     </nav>
     
-    
+  <script>
+	function divResize(){
+		
+		if( window.innerWidth < 768){
+			document.getElementById("img_insta").style.marginLeft = (window.innerWidth /5) + "px";
+		}else{
+			document.getElementById("img_insta").style.marginLeft = "300px";
+		}
+	};
+  </script>
   </body>
 </html>
