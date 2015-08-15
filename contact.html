@@ -1,0 +1,46 @@
+---
+layout: default
+title: Contact us
+---
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="starter-template.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<body onresize="divResize()" onload = "divResize()">
+  <div class="container">
+    <div class="starter-template">
+      <h1>Contact Us</h1>
+      <p class="lead" style="padding-left:50pt;padding-right:50pt">Email :
+        <a href="mailto:feelingsunday2014@gmail.com">support@feelingsunday.com</a>
+      </p>
+      <br/><br/><br/><br/>
+      <h1>Others</h1>
+      <a href="#"><img src="file/07FacebookButton_Pc.png" width="56pt" height="56pt"/></a>
+      <a href="#"><img src="file/05GoogleButton_Pc.png" width="56pt" height="56pt"/></a>
+      <a href="#"><img src="file/06InstaButton_Pc.png" width="56pt" height="56pt"/></a>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  <script>
+  function divResize(){
+
+  	if( window.innerWidth < 768){
+  		document.getElementById("img_insta").style.marginLeft = (window.innerWidth /5) + "px";
+  	}else{
+  		document.getElementById("img_insta").style.marginLeft = "300px";
+  	}
+  };
+  </script>
+</body>

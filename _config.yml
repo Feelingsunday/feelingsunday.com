@@ -1,0 +1,19 @@
+# Site settings
+title: Upsome
+email: support@feelingsunday.com
+description: > # this means to ignore newlines until "baseurl:"
+  Upsome - Follow your heart
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "www.feelingsunday.com" # the base hostname & protocol for your site
+
+timezone: Asia/Seoul
+markdown: redcarpet
+pygments: true
+
+navigation:
+- text: About
+  url: /about.html
+- text: Blog
+  url: /blog.html
+- text: Contact us
+  url: /contact.html
