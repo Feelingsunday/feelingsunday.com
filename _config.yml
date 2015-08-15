@@ -14,9 +14,12 @@ paginate: 5
 paginate_path: "/blog/page:num/"
 
 navigation:
-- text: About
-  url: /about/
-- text: Blog
-  url: /blog/
-- text: Contact
-  url: /contact/
+  - text: About
+    url: /about/
+    indexUrl: /about/index.html
+  - text: Blog
+    url: /blog/
+    indexUrl: /blog/index.html
+  - text: Contact
+    url: /contact/
+    indexUrl: /contact/index.html
