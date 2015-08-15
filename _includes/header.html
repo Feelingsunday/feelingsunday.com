@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/"><img src="file/02LogoS_Pc.png" width="50px" height="50px"/></a>
+      <a href="/"><img src="/file/02LogoS_Pc.png" width="50px" height="50px"/></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -19,7 +19,12 @@
         {% endif %}
         <li class="{{ current }}"><a href="{{ link.url }}">{{ link.text }}</a></li>
       {% endfor %}
-        <li><a href="https://play.google.com/store/apps/details?id=com.feelingsunday.upsome"><img src="file/04HomeButton_PC.png" width="25px" height="25px"/>Get Upsome</a></li>
+        <li>
+          <a href="https://play.google.com/store/apps/details?id=com.feelingsunday.upsome">
+            <img src="/file/04HomeButton_PC.png" width="25px" height="25px"/>
+            Get Upsome
+          </a>
+        </li>
       </ul>
     </div>
   </div>

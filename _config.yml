@@ -10,10 +10,13 @@ timezone: Asia/Seoul
 markdown: redcarpet
 pygments: true
 
+paginate: 5
+paginate_path: "/blog/page:num/"
+
 navigation:
 - text: About
-  url: /about.html
+  url: /about/
 - text: Blog
-  url: /blog.html
-- text: Contact us
-  url: /contact.html
+  url: /blog/
+- text: Contact
+  url: /contact/

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  {% include header.html %}
+  <body onresize="divResize()" onload = "divResize()">
+    <div class="container">
+      <div class="starter-template">
+        <h1>{{ page.title }}</h1>
+        <p class="lead" align="left" style="padding-left:50pt;padding-right:50pt">
+          {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+        </p>
+        <div class="lead" align="left" style="padding-left:50pt;padding-right:50pt;padding-bottom:50pt">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <script>
+  	function divResize(){
+  		if( window.innerWidth < 768){
+  			document.getElementById("img_insta").style.marginLeft = (window.innerWidth /5) + "px";
+  		}else{
+  			document.getElementById("img_insta").style.marginLeft = "300px";
+  		}
+  	};
+    </script>
+  </body>
+  {% include footer.html %}
+</html>
