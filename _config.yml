@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "www.feelingsunday.com" # the base hostname & protocol for your site
 
-timezone: Asia/Seoul
+timezone: America/Los_Angeles
 markdown: redcarpet
 pygments: true
 
