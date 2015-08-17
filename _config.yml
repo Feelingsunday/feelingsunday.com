@@ -10,7 +10,7 @@ timezone: America/Los_Angeles
 markdown: redcarpet
 pygments: true
 
-paginate: 5
+paginate: 1
 paginate_path: "/blog/page:num/"
 
 navigation:
