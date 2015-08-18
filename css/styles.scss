@@ -1,0 +1,29 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+$break-small: 768px;
+
+.blog .lead {
+  text-align: left;
+
+  img {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $break-small) {
+    padding-left:66px;
+    padding-right:66px;
+
+    img {
+      margin-left: 300px;
+    }
+  }
+}
+
+.footer {
+  color: #AFA29F;
+  font-weight: bold;
+  text-align: center;
+}
